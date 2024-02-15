@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Bootcamp Codeacademy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="./img/starcraft-2-zergling.png" alt="Starcraft 2 Zergling" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.production.css">
+  </head>
+  <body>
+    <header class="header-bar">
+      <img src="img/webdeveloper.svg" alt="Logo" class="page-header__item img-logo">
+      <h1>Patrick Oliphant</h1>
+      <nav class="main-navigation pageheader__item" >
+        <div>
+          <ul role="menubar">
+            <li role="presentation">
+              <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
+            </li>
+            <li role="presentation">
+              <a href="work.html" role="menuitem" class="navigation-list__item">Work</a>
+            </li>
+            <li role="presentation">
+              <a href="about.html" role="menuitem" class="navigation-list__item">More About Me</a>
+            </li>
+            <li role="presentation">
+              <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="main-contact">
+      <div class="contact-form-input">
+        <form action="/contact-form-action" method="post">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="user_name" required />
+          <br />
+          <br />
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="user_email" required />
+          <br />
+          <br />
+          <label for="message">Message:</label>
+          <textarea id="message" name="user_message" required></textarea>
+          <br />
+          <br />
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+      <div class="contact-form">
+        <h1>My Contacts</h1>
+        <a href="unreached1@gmail.com">Send Me an Email</a><br />
+        <a href="+4917620032093">+4917620032093</a>
+        <br />
+        <br />
+      </div>
+    </main>
+    <footer class="page-footer">
+      <div>
+        <p>Find me on</p>
+        <!-- Github logo -->
+        <img
+          src="img/317712_code repository_github_repository_resource_icon.svg"
+          alt="github"
+        />
+        <!-- LinkedIn logo -->
+        <img src="img/104493_linkedin_icon.svg" alt="linkedin" />
+      </div>
+    </footer>
+    <script src="JS/tota11y.min.js"></script>
+  </body>
+</html>

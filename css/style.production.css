@@ -5,13 +5,14 @@
 * Browsers: last 2 version
 */
 
-*{
+* {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 body {
   background-color: rgb(199, 197, 197);
-  font-family: 'Sixtyfour', sans-serif;
+  font-family: "Sixtyfour", sans-serif;
   font-weight: 450;
   font-size: 16px;
   line-height: 1.5;
@@ -27,20 +28,23 @@ h1 {
 
 a {
   color: #2719a0;
-  font-size: 16px; /* Set your initial font size */
+  font-size: 16px;
+  /* Set your initial font size */
   -webkit-transition: -webkit-transform 0.3s ease;
   transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
-  transition: transform 0.3s ease, -webkit-transform 0.3s ease; /* Add transition to the transform property with a duration of 0.3s */
-  display: inline-block; /* Ensures the link behaves as a block element for sizing */
-
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  /* Add transition to the transform property with a duration of 0.3s */
+  display: inline-block;
+  /* Ensures the link behaves as a block element for sizing */
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   /* No underlining when hovering over a link */
   text-decoration: none;
   -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 a:visited {
@@ -55,7 +59,6 @@ a:active {
 
 .maininfo {
   padding: 20px;
-
 }
 
 footer {
@@ -65,7 +68,6 @@ footer {
 .img-logo {
   width: 15%;
   height: 10%;
-  
 }
 
 .laptop__SVG__container {
@@ -73,11 +75,11 @@ footer {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .about-me {
@@ -85,12 +87,12 @@ footer {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 button {
@@ -102,67 +104,86 @@ button {
   background-color: #4c17ad;
   color: white;
   text-decoration: none;
-  /*adds spacing to the button (this will be discussed more in-depth later) */
+  /* adds spacing to the button (this will be discussed more in-depth later) */
   padding: 10px;
   border-radius: 3px;
   /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-  -webkit-transition: padding 0.3s ease, font-size 0.3s ease, -webkit-transform 0.5s ease;
-  transition: padding 0.3s ease, font-size 0.3s ease, -webkit-transform 0.5s ease;
+  -webkit-transition: padding 0.3s ease, font-size 0.3s ease,
+    -webkit-transform 0.5s ease;
+  transition: padding 0.3s ease, font-size 0.3s ease,
+    -webkit-transform 0.5s ease;
   transition: transform 0.5s ease, padding 0.3s ease, font-size 0.3s ease;
-  transition: transform 0.5s ease, padding 0.3s ease, font-size 0.3s ease, -webkit-transform 0.5s ease; /* Add transitions for smooth effect */
+  transition: transform 0.5s ease, padding 0.3s ease, font-size 0.3s ease,
+    -webkit-transform 0.5s ease;
+  /* Add transitions for smooth effect */
 }
 
-button:hover, button:focus {
+button:hover,
+button:focus {
   /* lets the mouse appear as a hand when hovering over the button */
   cursor: pointer;
   /* reduces the opacity of the button to 80% */
   opacity: 0.8;
   -webkit-transform: scale(1.02);
-          transform: scale(1.02); /* Scale the button to 120% on hover (adjust as needed) */
-  padding: 15px 15px; /* Increase the padding on hover (adjust as needed) */
-  font-size: 12px; /* Increase the font size on hover (adjust as needed) */
+  transform: scale(1.02);
+  /* Scale the button to 120% on hover (adjust as needed) */
+  padding: 15px;
+  /* Increase the padding on hover (adjust as needed) */
+  font-size: 12px;
+  /* Increase the font size on hover (adjust as needed) */
 }
 
 #laptop__SVG {
   -webkit-animation: growShrinkAnimation 2s ease-in-out 2;
-          animation: growShrinkAnimation 2s ease-in-out 2;
+  animation: growShrinkAnimation 2s ease-in-out 2;
 }
 
 h1 {
   -webkit-transition: -webkit-transform 0.3s ease;
   transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
-  transition: transform 0.3s ease, -webkit-transform 0.3s ease; /* Add transition to the transform property with a duration of 0.3s */
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  /* Add transition to the transform property with a duration of 0.3s */
 }
 
+/* Define the CSS keyframes for the grow and shrink animation */
+@-webkit-keyframes growShrinkAnimation {
 
+  0%,
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    /* Initial and final size is 100% */
+  }
 
-    /* Define the CSS keyframes for the grow and shrink animation */
-    @-webkit-keyframes growShrinkAnimation {
-      0%, 100% {
-        -webkit-transform: scale(1);
-                transform: scale(1); /* Initial and final size is 100% */
-      }
-      50% {
-        -webkit-transform: scale(1.5);
-                transform: scale(1.5); /* Grow to 150% halfway through the animation */
-      }
-    }
-    @keyframes growShrinkAnimation {
-      0%, 100% {
-        -webkit-transform: scale(1);
-                transform: scale(1); /* Initial and final size is 100% */
-      }
-      50% {
-        -webkit-transform: scale(1.5);
-                transform: scale(1.5); /* Grow to 150% halfway through the animation */
-      }
-    }
+  50% {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    /* Grow to 150% halfway through the animation */
+  }
+}
+
+@keyframes growShrinkAnimation {
+
+  0%,
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    /* Initial and final size is 100% */
+  }
+
+  50% {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    /* Grow to 150% halfway through the animation */
+  }
+}
 
 h1:hover {
   -webkit-transform: scale(1.05);
-          transform: scale(1.05); /* Scale the grid item to 120% on hover (adjust as needed) */
+  transform: scale(1.05);
+  /* Scale the grid item to 120% on hover (adjust as needed) */
 }
 
 .header-bar {
@@ -170,15 +191,15 @@ h1:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack:  justify;
-      -ms-flex-pack:  justify;
-          justify-content:  space-between;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   margin-bottom: 30px;
 }
 
@@ -195,37 +216,45 @@ h1:hover {
   margin-left: 15px;
 }
 
- .page-footer {
+.page-footer {
   clear: both;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   text-align: center;
-  -webkit-transition: padding 0.3s ease, font-size 0.3s ease, -webkit-transform 0.3s ease;
-  transition: padding 0.3s ease, font-size 0.3s ease, -webkit-transform 0.3s ease;
+  -webkit-transition: padding 0.3s ease, font-size 0.3s ease,
+    -webkit-transform 0.3s ease;
+  transition: padding 0.3s ease, font-size 0.3s ease,
+    -webkit-transform 0.3s ease;
   transition: transform 0.3s ease, padding 0.3s ease, font-size 0.3s ease;
-  transition: transform 0.3s ease, padding 0.3s ease, font-size 0.3s ease, -webkit-transform 0.3s ease; /* Add transitions for smooth effect */
+  transition: transform 0.3s ease, padding 0.3s ease, font-size 0.3s ease,
+    -webkit-transform 0.3s ease;
+  /* Add transitions for smooth effect */
 }
 
 .page-footer:hover {
   -webkit-transform: scale(1.05);
-          transform: scale(1.05); /* Scale the button to 120% on hover (adjust as needed) */
-  padding: 15px 15px; /* Increase the padding on hover (adjust as needed) */
-  font-size: 18px; /* Increase the font size on hover (adjust as needed) */
+  transform: scale(1.05);
+  /* Scale the button to 120% on hover (adjust as needed) */
+  padding: 15px;
+  /* Increase the padding on hover (adjust as needed) */
+  font-size: 18px;
+  /* Increase the font size on hover (adjust as needed) */
 }
 
 .footer-button {
   width: 20%;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
-.contact-form, .contact-form-input{
+.contact-form,
+.contact-form-input {
   text-align: center;
 }
 
@@ -235,32 +264,34 @@ h1:hover {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
+footer {
+  margin-top: auto;
+}
 
-footer{
-  margin-top: auto; }
-
-  /* start grid fallback */
+/* start grid fallback */
 .grid__item {
   display: inline-block;
   width: 33%;
   -webkit-transition: -webkit-transform 0.3s ease;
   transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
-  transition: transform 0.3s ease, -webkit-transform 0.3s ease; /* Add transition to the transform property with a duration of 0.3s */
- }
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  /* Add transition to the transform property with a duration of 0.3s */
+}
 
- .grid__item:hover {
+.grid__item:hover {
   -webkit-transform: scale(1.05);
-          transform: scale(1.05); /* Scale the grid item to 120% on hover (adjust as needed) */
- }
- /* end grid fallback */
+  transform: scale(1.05);
+  /* Scale the grid item to 120% on hover (adjust as needed) */
+}
 
+/* end grid fallback */
 
- @supports (display: grid) {
+@supports (display: grid) {
   .grid {
     display: -ms-grid;
     display: grid;
@@ -269,19 +300,20 @@ footer{
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 15px;
     margin: 0;
- 
   }
+
   .grid__item {
     background-color: lightgray;
     width: auto;
     min-height: auto;
     margin: 0;
   }
+
   .grid__item:last-child {
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
   }
- }
+}
 
 @media all and (max-width: 500px) {
   .grid {
@@ -290,7 +322,7 @@ footer{
   }
 }
 
-@media all and (min-width: 500px) and (max-width: 750px){
+@media all and (min-width: 500px) and (max-width: 750px) {
   .grid {
     -ms-grid-columns: 1fr 15px 1fr;
     grid-template-columns: 1fr 1fr;
@@ -301,10 +333,12 @@ footer{
   .grid {
     grid-gap: 10px;
   }
+
   .grid__item:last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
   }
+
   h1 {
     font-size: 20px;
   }
@@ -313,7 +347,8 @@ footer{
 @media screen and (max-width: 768px) {
   .grid-container {
     -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr; /* Adjust to a 1-column layout */
+    grid-template-columns: 1fr;
+    /* Adjust to a 1-column layout */
   }
 }
 
@@ -321,6 +356,7 @@ footer{
 @media screen and (max-width: 480px) {
   .grid-container {
     -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr; /* Adjust to a 1-column layout for even smaller screens */
+    grid-template-columns: 1fr;
+    /* Adjust to a 1-column layout for even smaller screens */
   }
 }

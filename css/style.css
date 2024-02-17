@@ -1,19 +1,20 @@
-*{
-  box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
-  :root {
-    --primary-color: rgb(0, 0, 0);
-    --a-color: #2719a0;
-    --a-visited: #1967ce;
-    --body-background-color: rgb(199, 197, 197);
-    --a-activ: #c20f3c;
-    --button-background-color: #4c17ad;
-    --grid-item-color: lightgray;
-  }
+:root {
+  --primary-color: rgb(0, 0, 0);
+  --a-color: #2719a0;
+  --a-visited: #1967ce;
+  --body-background-color: rgb(199, 197, 197);
+  --a-activ: #c20f3c;
+  --button-background-color: #4c17ad;
+  --grid-item-color: lightgray;
+}
 
 body {
   background-color: var(--body-background-color);
-  font-family: 'Sixtyfour', sans-serif;
+  font-family: "Sixtyfour", sans-serif;
   font-weight: 450;
   font-size: 16px;
   line-height: 1.5;
@@ -32,10 +33,10 @@ a {
   font-size: 16px; /* Set your initial font size */
   transition: transform 0.3s ease; /* Add transition to the transform property with a duration of 0.3s */
   display: inline-block; /* Ensures the link behaves as a block element for sizing */
-
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   /* No underlining when hovering over a link */
   text-decoration: none;
   transform: scale(1.2);
@@ -53,7 +54,6 @@ a:active {
 
 .maininfo {
   padding: 20px;
-
 }
 
 footer {
@@ -63,7 +63,6 @@ footer {
 .img-logo {
   width: 15%;
   height: 10%;
-  
 }
 
 .laptop__SVG__container {
@@ -80,10 +79,9 @@ footer {
 
 button {
   /* overwrites browser defaults and resets the border */
-  border: none;
-  /* takes the font from the outer container */
+  border: none; /* takes the font from the outer container */
   font-family: inherit;
-  /* styles the background color, font color, and text decoration (underline, etc.) of the button */
+  /* styles the background color, font color, and text decoration (underline, etc.) of the button */ 
   background-color: var(--button-background-color);
   color: white;
   text-decoration: none;
@@ -95,13 +93,17 @@ button {
   transition: transform 0.5s ease, padding 0.3s ease, font-size 0.3s ease; /* Add transitions for smooth effect */
 }
 
-button:hover, button:focus {
+button:hover,
+button:focus {
   /* lets the mouse appear as a hand when hovering over the button */
   cursor: pointer;
   /* reduces the opacity of the button to 80% */
+
   opacity: 0.8;
-  transform: scale(1.02); /* Scale the button to 120% on hover (adjust as needed) */
-  padding: 15px 15px; /* Increase the padding on hover (adjust as needed) */
+  transform: scale(
+    1.02
+  ); /* Scale the button to 120% on hover (adjust as needed) */
+  padding: 15px; /* Increase the padding on hover (adjust as needed) */
   font-size: 12px; /* Increase the font size on hover (adjust as needed) */
 }
 
@@ -113,27 +115,28 @@ h1 {
   transition: transform 0.3s ease; /* Add transition to the transform property with a duration of 0.3s */
 }
 
-
-
-    /* Define the CSS keyframes for the grow and shrink animation */
-    @keyframes growShrinkAnimation {
-      0%, 100% {
-        transform: scale(1); /* Initial and final size is 100% */
-      }
-      50% {
-        transform: scale(1.5); /* Grow to 150% halfway through the animation */
-      }
-    }
+/* Define the CSS keyframes for the grow and shrink animation */
+@keyframes growShrinkAnimation {
+  0%,
+  100% {
+    transform: scale(1); /* Initial and final size is 100% */
+  }
+  50% {
+    transform: scale(1.5); /* Grow to 150% halfway through the animation */
+  }
+}
 
 h1:hover {
-  transform: scale(1.05); /* Scale the grid item to 120% on hover (adjust as needed) */
+  transform: scale(
+    1.05
+  ); /* Scale the grid item to 120% on hover (adjust as needed) */
 }
 
 .header-bar {
   display: flex;
   align-items: center;
   flex-direction: row;
-  justify-content:  space-between;
+  justify-content: space-between;
   margin-bottom: 30px;
 }
 
@@ -150,7 +153,7 @@ h1:hover {
   margin-left: 15px;
 }
 
- .page-footer {
+.page-footer {
   clear: both;
   display: flex;
   flex-direction: column;
@@ -159,8 +162,10 @@ h1:hover {
 }
 
 .page-footer:hover {
-  transform: scale(1.05); /* Scale the button to 120% on hover (adjust as needed) */
-  padding: 15px 15px; /* Increase the padding on hover (adjust as needed) */
+  transform: scale(
+    1.05
+  ); /* Scale the button to 120% on hover (adjust as needed) */
+  padding: 15px; /* Increase the padding on hover (adjust as needed) */
   font-size: 18px; /* Increase the font size on hover (adjust as needed) */
 }
 
@@ -169,7 +174,8 @@ h1:hover {
   justify-content: center;
 }
 
-.contact-form, .contact-form-input{
+.contact-form,
+.contact-form-input {
   text-align: center;
 }
 
@@ -178,31 +184,31 @@ h1:hover {
   flex-direction: column;
 }
 
+footer {
+  margin-top: auto;
+}
 
-footer{
-  margin-top: auto; }
-
-  /* start grid fallback */
+/* start grid fallback */
 .grid__item {
   display: inline-block;
   width: 33%;
   transition: transform 0.3s ease; /* Add transition to the transform property with a duration of 0.3s */
- }
+}
 
- .grid__item:hover {
-  transform: scale(1.05); /* Scale the grid item to 120% on hover (adjust as needed) */
- }
- /* end grid fallback */
+.grid__item:hover {
+  transform: scale(
+    1.05
+  ); /* Scale the grid item to 120% on hover (adjust as needed) */
+}
+/* end grid fallback */
 
-
- @supports (display: grid) {
+@supports (display: grid) {
   .grid {
-    display: grid;
-    /* grid-template-columns: 300px 300px 300px; fractions are better than pixels - they are responsive */
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 15px;
-    margin: 0;
- 
+  display: grid;
+  /* grid-template-columns: 300px 300px 300px; fractions are better than pixels - they are responsive */
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 15px;
+  margin: 0;
   }
   .grid__item {
     background-color: var(--grid-item-color);
@@ -213,7 +219,7 @@ footer{
   .grid__item:last-child {
     grid-template-columns: 1fr 1fr;
   }
- }
+}
 
 @media all and (max-width: 500px) {
   .grid {
@@ -221,13 +227,13 @@ footer{
   }
 }
 
-@media all and (min-width: 500px) and (max-width: 750px){
+@media all and (min-width: 500px) and (max-width: 750px) {
   .grid {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-@media all and (max-width: 750px) {
+  @media all and (max-width: 750px) {
   .grid {
     grid-gap: 10px;
   }

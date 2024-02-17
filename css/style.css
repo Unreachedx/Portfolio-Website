@@ -80,15 +80,12 @@ footer {
 button {
   /* overwrites browser defaults and resets the border */
   border: none; /* takes the font from the outer container */
-  font-family: inherit;
-  /* styles the background color, font color, and text decoration (underline, etc.) of the button */ 
+  font-family: inherit; /* styles the background color, font color, and text decoration (underline, etc.) of the button */
   background-color: var(--button-background-color);
   color: white;
-  text-decoration: none;
-  /*adds spacing to the button (this will be discussed more in-depth later) */
+  text-decoration: none; /* adds spacing to the button (this will be discussed more in-depth later) */
   padding: 10px;
-  border-radius: 3px;
-  /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+  border-radius: 3px; /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   transition: transform 0.5s ease, padding 0.3s ease, font-size 0.3s ease; /* Add transitions for smooth effect */
 }
@@ -96,13 +93,10 @@ button {
 button:hover,
 button:focus {
   /* lets the mouse appear as a hand when hovering over the button */
-  cursor: pointer;
-  /* reduces the opacity of the button to 80% */
+  cursor: pointer; /* reduces the opacity of the button to 80% */
 
   opacity: 0.8;
-  transform: scale(
-    1.02
-  ); /* Scale the button to 120% on hover (adjust as needed) */
+  transform: scale(1.02); /* Scale the button to 120% on hover (adjust as needed) */
   padding: 15px; /* Increase the padding on hover (adjust as needed) */
   font-size: 12px; /* Increase the font size on hover (adjust as needed) */
 }
@@ -121,15 +115,14 @@ h1 {
   100% {
     transform: scale(1); /* Initial and final size is 100% */
   }
+
   50% {
     transform: scale(1.5); /* Grow to 150% halfway through the animation */
   }
 }
 
 h1:hover {
-  transform: scale(
-    1.05
-  ); /* Scale the grid item to 120% on hover (adjust as needed) */
+  transform: scale(1.05); /* Scale the grid item to 120% on hover (adjust as needed) */
 }
 
 .header-bar {
@@ -158,13 +151,12 @@ h1:hover {
   display: flex;
   flex-direction: column;
   text-align: center;
-  transition: transform 0.3s ease, padding 0.3s ease, font-size 0.3s ease; /* Add transitions for smooth effect */
+  transition: transform 0.3s ease, padding 0.3s ease, font-size 0.3s ease;
+  /* Add transitions for smooth effect */
 }
 
 .page-footer:hover {
-  transform: scale(
-    1.05
-  ); /* Scale the button to 120% on hover (adjust as needed) */
+  transform: scale(1.05); /* Scale the button to 120% on hover (adjust as needed) */
   padding: 15px; /* Increase the padding on hover (adjust as needed) */
   font-size: 18px; /* Increase the font size on hover (adjust as needed) */
 }
@@ -192,30 +184,30 @@ footer {
 .grid__item {
   display: inline-block;
   width: 33%;
-  transition: transform 0.3s ease; /* Add transition to the transform property with a duration of 0.3s */
+  transition: transform 0.3s ease /* Add transition to the transform property with a duration of 0.3s */
 }
 
 .grid__item:hover {
-  transform: scale(
-    1.05
-  ); /* Scale the grid item to 120% on hover (adjust as needed) */
+  transform: scale(1.05);/* Scale the grid item to 120% on hover (adjust as needed) */
 }
+
 /* end grid fallback */
 
 @supports (display: grid) {
   .grid {
-  display: grid;
-  /* grid-template-columns: 300px 300px 300px; fractions are better than pixels - they are responsive */
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 15px;
-  margin: 0;
+    display: grid; /* grid-template-columns: 300px 300px 300px; fractions are better than pixels - they are responsive */
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+    margin: 0;
   }
+
   .grid__item {
     background-color: var(--grid-item-color);
     width: auto;
     min-height: auto;
     margin: 0;
   }
+
   .grid__item:last-child {
     grid-template-columns: 1fr 1fr;
   }
@@ -233,14 +225,16 @@ footer {
   }
 }
 
-  @media all and (max-width: 750px) {
+@media all and (max-width: 750px) {
   .grid {
     grid-gap: 10px;
   }
+
   .grid__item:last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
   }
+
   h1 {
     font-size: 20px;
   }

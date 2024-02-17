@@ -151,8 +151,7 @@ h1:hover {
   display: flex;
   flex-direction: column;
   text-align: center;
-  transition: transform 0.3s ease, padding 0.3s ease, font-size 0.3s ease;
-  /* Add transitions for smooth effect */
+  transition: transform 0.3s ease, padding 0.3s ease, font-size 0.3s ease; /* Add transitions for smooth effect */
 }
 
 .page-footer:hover {
@@ -252,3 +251,4 @@ footer {
     grid-template-columns: 1fr; /* Adjust to a 1-column layout for even smaller screens */
   }
 }
+

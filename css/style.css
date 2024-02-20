@@ -77,6 +77,10 @@ footer {
   flex-direction: column;
 }
 
+th {
+  text-align: left;
+}
+
 button {
   /* overwrites browser defaults and resets the border */
   border: none; /* takes the font from the outer container */

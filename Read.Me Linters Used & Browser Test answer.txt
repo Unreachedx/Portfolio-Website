@@ -1,11 +1,1 @@
-I used the sytlelint extension mentioned by CF in the Exersise and HTMLHint same from CF mentioned.
-
-I did just copy the Default Config from the CF suggestion becouse im not sure what to change in that yet but im working on it :-)
-
-
-I did the Cross Browser Testing on atleast the 4 Mentioned Browsers  IE Edge, Safari, Firefox, and Chrome.
-For me everything worked fine.
-
-I decided as a Hosting Plattform for now on GitHub Pages couse it seemed the most intuitiv to use directly.
-
 https://unreachedx.github.io/Portfolio-Website/ the current URL

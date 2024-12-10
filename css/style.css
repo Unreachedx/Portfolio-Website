@@ -1,258 +1,199 @@
+/* Universal styles */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
-  --primary-color: rgb(0, 0, 0);
-  --a-color: #2719a0;
-  --a-visited: #1967ce;
-  --body-background-color: rgb(199, 197, 197);
-  --a-activ: #c20f3c;
-  --button-background-color: #4c17ad;
-  --grid-item-color: lightgray;
+  /* Color palette */
+  --primary-color: #2c3e50;
+  --secondary-color: #34495e;
+  --accent-color: #e74c3c;
+  --background-color: #ecf0f1;
+  --text-color: #2d3436;
+  --link-hover-color: #e67e22;
+
+  /* Fonts */
+  --font-primary: 'Roboto', sans-serif;
+  --font-secondary: 'Montserrat', sans-serif;
 }
 
+/* Body styles */
 body {
-  background-color: var(--body-background-color);
-  font-family: "Sixtyfour", sans-serif;
-  font-weight: 450;
-  font-size: 16px;
-  line-height: 1.5;
+  font-family: var(--font-primary);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
   padding: 20px;
 }
 
-h1 {
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-secondary);
   color: var(--primary-color);
-  font-size: 30px;
-  font-weight: 700;
-  padding: 10px;
+  margin-bottom: 15px;
 }
 
+h1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+/* Links */
 a {
-  color: var(--a-color);
-  font-size: 16px; /* Set your initial font size */
-  transition: transform 0.3s ease; /* Add transition to the transform property with a duration of 0.3s */
-  display: inline-block; /* Ensures the link behaves as a block element for sizing */
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-a:hover,
-a:focus {
-  /* No underlining when hovering over a link */
-  text-decoration: none;
-  transform: scale(1.2);
+a:hover, a:focus {
+  color: var(--link-hover-color);
+  transform: scale(1.1);
 }
 
 a:visited {
-  /* visited link */
-  color: var(--a-visited);
+  color: var(--secondary-color);
 }
 
-a:active {
-  /* selected link */
-  color: var(--a-activ);
-}
-
-.maininfo {
-  padding: 20px;
-}
-
-footer {
-  padding: 20px;
-}
-
-.img-logo {
-  width: 15%;
-  height: 10%;
-}
-
-.laptop__SVG__container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.about-me {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-th {
-  text-align: left;
-}
-
+/* Buttons */
 button {
-  /* overwrites browser defaults and resets the border */
-  border: none; /* takes the font from the outer container */
-  font-family: inherit; /* styles the background color, font color, and text decoration (underline, etc.) of the button */
-  background-color: var(--button-background-color);
+  font-family: var(--font-secondary);
+  background-color: var(--accent-color);
   color: white;
-  text-decoration: none; /* adds spacing to the button (this will be discussed more in-depth later) */
-  padding: 10px;
-  border-radius: 3px; /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-  transition: transform 0.5s ease, padding 0.3s ease, font-size 0.3s ease; /* Add transitions for smooth effect */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-button:hover,
-button:focus {
-  /* lets the mouse appear as a hand when hovering over the button */
-  cursor: pointer; /* reduces the opacity of the button to 80% */
-
-  opacity: 0.8;
-  transform: scale(1.02); /* Scale the button to 120% on hover (adjust as needed) */
-  padding: 15px; /* Increase the padding on hover (adjust as needed) */
-  font-size: 12px; /* Increase the font size on hover (adjust as needed) */
+button:hover, button:focus {
+  background-color: var(--link-hover-color);
+  transform: scale(1.05);
 }
 
-#laptop__SVG {
-  animation: growShrinkAnimation 2s ease-in-out 2;
-}
-
-h1 {
-  transition: transform 0.3s ease; /* Add transition to the transform property with a duration of 0.3s */
-}
-
-/* Define the CSS keyframes for the grow and shrink animation */
-@keyframes growShrinkAnimation {
-  0%,
-  100% {
-    transform: scale(1); /* Initial and final size is 100% */
-  }
-
-  50% {
-    transform: scale(1.5); /* Grow to 150% halfway through the animation */
-  }
-}
-
-h1:hover {
-  transform: scale(1.05); /* Scale the grid item to 120% on hover (adjust as needed) */
-}
-
+/* Header */
 .header-bar {
   display: flex;
   align-items: center;
-  flex-direction: row;
   justify-content: space-between;
-  margin-bottom: 30px;
+  padding: 20px;
+  background-color: var(--primary-color);
+  color: white;
 }
 
-.navigation-list__item--active {
-  text-decoration: none;
+.img-logo {
+  width: 100px;
 }
 
-.navigation-list {
-  list-style-type: none;
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
 }
 
-.navigation-list li {
-  display: inline-block;
-  margin-left: 15px;
+.nav-list li a {
+  color: white;
+  font-size: 1rem;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
 }
 
+.nav-list li a:hover {
+  color: var(--link-hover-color);
+}
+
+/* Footer */
 .page-footer {
-  clear: both;
-  display: flex;
-  flex-direction: column;
+  background-color: var(--secondary-color);
+  color: white;
   text-align: center;
-  transition: transform 0.3s ease, padding 0.3s ease, font-size 0.3s ease; /* Add transitions for smooth effect */
+  padding: 20px;
+  font-size: 0.9rem;
 }
 
-.page-footer:hover {
-  transform: scale(1.05); /* Scale the button to 120% on hover (adjust as needed) */
-  padding: 15px; /* Increase the padding on hover (adjust as needed) */
-  font-size: 18px; /* Increase the font size on hover (adjust as needed) */
+.page-footer img {
+  width: 30px;
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-.footer-button {
-  width: 20%;
-  justify-content: center;
+.page-footer img:hover {
+  transform: scale(1.2);
 }
 
-.contact-form,
-.contact-form-input {
+/* Main Content */
+.maininfo, .about-me {
+  padding: 20px;
   text-align: center;
 }
 
-.main-contact {
-  display: flex;
-  flex-direction: column;
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
 }
 
-footer {
-  margin-top: auto;
-}
-
-/* start grid fallback */
 .grid__item {
-  display: inline-block;
-  width: 33%;
-  transition: transform 0.3s ease /* Add transition to the transform property with a duration of 0.3s */
+  background-color: white;
+  border: 1px solid var(--secondary-color);
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .grid__item:hover {
-  transform: scale(1.05);/* Scale the grid item to 120% on hover (adjust as needed) */
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* end grid fallback */
-
-@supports (display: grid) {
-  .grid {
-    display: grid; /* grid-template-columns: 300px 300px 300px; fractions are better than pixels - they are responsive */
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 15px;
-    margin: 0;
-  }
-
-  .grid__item {
-    background-color: var(--grid-item-color);
-    width: auto;
-    min-height: auto;
-    margin: 0;
-  }
-
-  .grid__item:last-child {
-    grid-template-columns: 1fr 1fr;
-  }
+.grid__item h2 {
+  margin-bottom: 10px;
+  color: var(--primary-color);
 }
 
-@media all and (max-width: 500px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
+.grid__item p {
+  margin-bottom: 15px;
 }
 
-@media all and (min-width: 500px) and (max-width: 750px) {
-  .grid {
-    grid-template-columns: 1fr 1fr;
+.grid__item a {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .header-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 10px;
   }
 }
 
-@media all and (max-width: 750px) {
-  .grid {
-    grid-gap: 10px;
-  }
-
-  .grid__item:last-child {
-    grid-column: auto / auto;
-    grid-row: auto / auto;
-  }
-
+@media (max-width: 500px) {
   h1 {
-    font-size: 20px;
+    font-size: 1.8rem;
+  }
+
+  button {
+    padding: 8px 15px;
   }
 }
-
-@media screen and (max-width: 768px) {
-  .grid-container {
-    grid-template-columns: 1fr; /* Adjust to a 1-column layout */
-  }
-}
-
-/* Optional: Define additional breakpoints for further adjustments */
-@media screen and (max-width: 480px) {
-  .grid-container {
-    grid-template-columns: 1fr; /* Adjust to a 1-column layout for even smaller screens */
-  }
-}
-

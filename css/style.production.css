@@ -139,11 +139,11 @@ button:hover, button:focus {
   text-align: center;
 }
 
-/* Grid */
+/* Adjusting the grid for 6 items per row */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(6, 1fr); /* 6 items per row */
+  gap: 20px; /* Space between items */
   padding: 20px;
 }
 
@@ -195,6 +195,25 @@ button:hover, button:focus {
 
   button {
     padding: 8px 15px;
+  }
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 items per row for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row for small screens */
+  }
+}
+
+@media (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr; /* 1 item per row for extra small screens */
   }
 }
 

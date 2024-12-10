@@ -113,6 +113,10 @@ button:hover, button:focus {
   color: var(--link-hover-color); /* Optionally, change to a hover color */
 }
 
+.main-navigation a {
+  color: white; /* Change the link color to white */
+}
+
 /* Footer */
 .page-footer {
   background-color: var(--secondary-color);

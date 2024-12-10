@@ -103,14 +103,14 @@ button:hover, button:focus {
 }
 
 .nav-list li a {
-  color: white;
+  color: black; /* Set the text color to black */
   font-size: 1rem;
   text-transform: uppercase;
   transition: color 0.3s ease;
 }
 
 .nav-list li a:hover {
-  color: var(--link-hover-color);
+  color: var(--link-hover-color); /* Optionally, change to a hover color */
 }
 
 /* Footer */
@@ -139,11 +139,11 @@ button:hover, button:focus {
   text-align: center;
 }
 
-/* Grid */
+/* Adjusting the grid for 6 items per row */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(6, 1fr); /* 6 items per row */
+  gap: 20px; /* Space between items */
   padding: 20px;
 }
 
@@ -196,4 +196,103 @@ button:hover, button:focus {
   button {
     padding: 8px 15px;
   }
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 items per row for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row for small screens */
+  }
+}
+
+@media (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr; /* 1 item per row for extra small screens */
+  }
+}
+
+.programming__SVG__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  width: 100%; /* Full viewport width */
+  margin: 0; /* Remove any default margin */
+  text-align: center; /* Ensure child content is aligned */
+}
+
+.skills-table {
+  margin: 20px auto; /* Center the table */
+  border-collapse: collapse; /* Avoid double borders */
+  width: 80%; /* Adjust width as needed */
+  text-align: center; /* Center-align text within the table */
+}
+
+.skills-table th,
+.skills-table td {
+  border: 1px solid var(--secondary-color); /* Add border */
+  padding: 10px 15px; /* Add padding */
+}
+
+.skills-table th {
+  background-color: var(--primary-color); /* Header background */
+  color: white; /* Header text color */
+  font-weight: bold;
+}
+
+.skills-table tr:nth-child(even) {
+  background-color: #f9f9f9; /* Zebra stripe */
+}
+
+.skills-table tr:hover {
+  background-color: var(--accent-color); /* Highlight row on hover */
+  color: white;
+}
+
+.main-contact {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  flex-direction: column; /* Stack items vertically */
+  height: 100vh; /* Full viewport height */
+  text-align: center; /* Center text */
+  font-family: Arial, sans-serif;
+}
+
+.contact-container {
+  max-width: 500px;
+  width: 100%;
+}
+
+.contact-form-input form {
+  margin-bottom: 30px; /* Add space below the form */
+}
+
+.contact-form h1 {
+  margin-bottom: 15px; /* Add spacing above My Contacts */
+}
+
+.contact-form a {
+  display: block; /* Make links block elements for vertical spacing */
+  margin: 5px 0; /* Add spacing between links */
+}
+
+button {
+  background-color: var(--primary-color); /* Adjust to your theme color */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: var(--accent-color); /* Adjust hover color */
 }

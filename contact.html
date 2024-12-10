@@ -33,36 +33,40 @@
       </nav>
     </header>
     <main class="main-contact">
-      <div class="contact-form-input">
-        <form action="/contact-form-action" method="post">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="user_name" required>
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="user_email" required>
-          <label for="message">Message:</label>
-          <textarea id="message" name="user_message" required></textarea>
-          <br>
-          <br>
+      <div class="contact-container">
+        <div class="contact-form-input">
+          <form action="/contact-form-action" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="user_name" required>
+            <br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="user_email" required>
+            <br><br>
+            <label for="message">Message:</label>
+            <textarea id="message" name="user_message" required></textarea>
+            <br><br>
             <button type="submit">Send Message</button>
-          </div>
-        </form>
-      </div>
-      <div class="contact-form">
-        <h1>My Contacts</h1>
-        <a href="unreached1@gmail.com">Send Me an Email</a><br>
-        <a href="+4917620032093">+4917620032093</a>
-        <br>
-        <br>
+          </form>
+        </div>
+        <div class="contact-form">
+          <h1>My Contacts</h1>
+          <a href="mailto:unreached1@gmail.com">Send Me an Email</a><br>
+          <a href="tel:+4917620032093">+4917620032093</a>
+        </div>
       </div>
     </main>
     <footer class="page-footer">
       <div>
         <p>Find me on</p>
-        <!-- Github logo -->
-        <img src="img/317712_code_repository_github_repository_resource_icon.svg" alt="github">
-        <!-- LinkedIn logo -->
-        <img src="img/104493_linkedin_icon.svg" alt="linkedin">
-      </div>
+        <!-- GitHub link -->
+        <a href="https://github.com/Unreachedx" target="_blank">
+            <img src="img/317712_code_repository_github_repository_resource_icon.svg" alt="GitHub">
+        </a>
+        <!-- LinkedIn link -->
+        <a href="https://www.linkedin.com/in/patrick-oliphant-27a0a1247/" target="_blank">
+            <img src="img/104493_linkedin_icon.svg" alt="LinkedIn">
+        </a>
+    </div>
     </footer>
     <script src="JS/tota11y.min.js"></script>
   </body>

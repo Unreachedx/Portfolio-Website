@@ -221,15 +221,6 @@ button:hover, button:focus {
   }
 }
 
-.programming__SVG__container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Full viewport height */
-  width: 100%; /* Full viewport width */
-  margin: 0; /* Remove any default margin */
-  text-align: center; /* Ensure child content is aligned */
-}
 
 .skills-table {
   margin: 20px auto; /* Center the table */
@@ -483,4 +474,20 @@ h1 {
   line-height: 1.8;
   max-width: 800px;
   margin: 0 auto;
+}
+
+.personal_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* Adjust as needed for spacing */
+}
+
+.personal_container img {
+  border-radius: 50%; /* Makes the image circular, if square */
+  max-width: 300px; /* Adjust for your preferred size */
+  width: 100%;
+  height: auto;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+  border: 3px solid #ccc; /* Optional border for a clean look */
 }

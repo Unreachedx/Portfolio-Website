@@ -113,6 +113,10 @@ button:hover, button:focus {
   color: var(--link-hover-color); /* Optionally, change to a hover color */
 }
 
+.main-navigation a {
+  color: white; /* Change the link color to white */
+}
+
 /* Footer */
 .page-footer {
   background-color: var(--secondary-color);
@@ -295,4 +299,165 @@ button {
 
 button:hover {
   background-color: var(--accent-color); /* Adjust hover color */
+}
+
+
+/* Case Study Section */
+.case-study {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 900px;
+}
+
+.case-study__title {
+  font-size: 2rem;
+  font-family: var(--font-secondary);
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.case-study__overview,
+.case-study__purpose,
+.case-study__tools,
+.case-study__development,
+.case-study__challenges,
+.case-study__duration,
+.case-study__credits {
+  margin-bottom: 30px;
+}
+
+.case-study h2 {
+  font-size: 1.8rem;
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+  border-bottom: 2px solid var(--accent-color);
+  display: inline-block;
+}
+
+.case-study p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-color);
+  margin-bottom: 15px;
+}
+
+.case-study ul {
+  list-style: disc inside;
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.case-study ul li {
+  margin-bottom: 10px;
+}
+
+.case-study__image {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 10px;
+  margin: 15px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Highlighting Key Information */
+.case-study strong {
+  color: var(--primary-color);
+}
+
+/* Responsive Design for Case Study */
+@media (max-width: 768px) {
+  .case-study {
+    padding: 20px;
+  }
+
+  .case-study__title {
+    font-size: 1.8rem;
+  }
+
+  .case-study h2 {
+    font-size: 1.5rem;
+  }
+
+  .case-study p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Buttons for Case Study */
+.case-study button {
+  background-color: var(--primary-color);
+  color: white;
+  font-family: var(--font-secondary);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.case-study button:hover {
+  background-color: var(--accent-color);
+  transform: scale(1.05);
+}
+
+/* Credits Section Styling */
+.case-study__credits ul {
+  list-style: none;
+  padding: 0;
+}
+
+.case-study__credits ul li {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+/* Horizontal Line for Separation */
+.case-study hr {
+  border: none;
+  border-top: 1px solid var(--secondary-color);
+  margin: 20px 0;
+}
+
+/* Specific Styling for Development Section */
+.case-study__development {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.case-study__server-side,
+.case-study__client-side {
+  flex: 1 1 calc(50% - 20px);
+}
+
+.case-study__server-side h3,
+.case-study__client-side h3 {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+}
+
+.case-study__server-side p,
+.case-study__client-side p {
+  font-size: 1rem;
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .case-study__development {
+    flex-direction: column;
+  }
+
+  .case-study__server-side,
+  .case-study__client-side {
+    flex: 1 1 100%;
+  }
 }

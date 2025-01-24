@@ -7,11 +7,11 @@
 
 :root {
   /* Color palette */
-  --primary-color: #2c3e50;
+  --primary-color: #0b4f94;
   --secondary-color: #34495e;
   --accent-color: #e74c3c;
   --background-color: #ecf0f1;
-  --text-color: #2d3436;
+  --text-color: #262c2e;
   --link-hover-color: #e67e22;
 
   /* Fonts */
@@ -49,7 +49,7 @@ h3 {
   font-size: 1.5rem;
 }
 
-/* Links */
+/* Links hover effect */
 a {
   color: var(--accent-color);
   text-decoration: none;
@@ -58,7 +58,7 @@ a {
 
 a:hover, a:focus {
   color: var(--link-hover-color);
-  transform: scale(1.1);
+  transform: scale(1.1); /* Make links slightly bigger */
 }
 
 a:visited {
@@ -93,33 +93,12 @@ button:hover, button:focus {
 }
 
 .img-logo {
-  width: 100px;
-}
-
-.nav-list {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-.nav-list li a {
-  color: black; /* Set the text color to black */
-  font-size: 1rem;
-  text-transform: uppercase;
-  transition: color 0.3s ease;
-}
-
-.nav-list li a:hover {
-  color: var(--link-hover-color); /* Optionally, change to a hover color */
-}
-
-.main-navigation a {
-  color: white; /* Change the link color to white */
+  width: 200px;
 }
 
 /* Footer */
 .page-footer {
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   color: white;
   text-align: center;
   padding: 20px;
@@ -490,4 +469,25 @@ h1 {
   height: auto;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
   border: 3px solid #ccc; /* Optional border for a clean look */
+}
+
+/* Navbar links styled as buttons */
+.main-navigation ul li a {
+  display: inline-block; /* Allow padding for button look */
+  color: white; /* White text color for better contrast */
+  background-color: var(--secondary-color); /* Example button color */
+  text-decoration: none; /* Remove the underline */
+  padding: 5px 15px; /* Add space around text */
+  border-radius: 8px; /* Rounded corners for buttons */
+  font-family: 'Sixtyfour', sans-serif; /* Use your imported font */
+  font-weight: bold; /* Bold text for emphasis */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth animations */
+}
+
+/* Hover and focus effects */
+.main-navigation ul li a:hover,
+.main-navigation ul li a:focus {
+  background-color: var(--secondary-color); /* Darker color on hover */
+  transform: scale(1.05); /* Slightly enlarge the button */
+  color: white; /* Ensure text remains white */
 }

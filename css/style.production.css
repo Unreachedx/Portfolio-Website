@@ -6,20 +6,16 @@
 }
 
 :root {
-  /* Color palette */
   --primary-color: #0b4f94;
   --secondary-color: #34495e;
   --accent-color: #e74c3c;
   --background-color: #ecf0f1;
   --text-color: #262c2e;
   --link-hover-color: #e67e22;
-
-  /* Fonts */
   --font-primary: 'Roboto', sans-serif;
   --font-secondary: 'Montserrat', sans-serif;
 }
 
-/* Body styles */
 body {
   font-family: var(--font-primary);
   background-color: var(--background-color);
@@ -28,7 +24,6 @@ body {
   padding: 20px;
 }
 
-/* Headings */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-secondary);
   margin-bottom: 15px;
@@ -38,33 +33,21 @@ h1 {
   font-size: 2.5rem;
   text-transform: uppercase;
   letter-spacing: 2px;
+  color: Black;
 }
 
-h2 {
-  font-size: 2rem;
-}
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
 
-h3 {
-  font-size: 1.5rem;
-}
-
-/* Links hover effect */
 a {
   color: var(--accent-color);
   text-decoration: none;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
-a:hover, a:focus {
-  color: var(--link-hover-color);
-  transform: scale(1.1); /* Make links slightly bigger */
-}
+a:hover, a:focus { color: var(--link-hover-color); transform: scale(1.1); }
+a:visited { color: var(--secondary-color); }
 
-a:visited {
-  color: var(--secondary-color);
-}
-
-/* Buttons */
 button {
   font-family: var(--font-secondary);
   background-color: var(--accent-color);
@@ -76,12 +59,8 @@ button {
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-button:hover, button:focus {
-  background-color: var(--link-hover-color);
-  transform: scale(1.05);
-}
+button:hover, button:focus { background-color: var(--link-hover-color); transform: scale(1.05); }
 
-/* Header */
 .header-bar {
   display: flex;
   align-items: center;
@@ -91,11 +70,8 @@ button:hover, button:focus {
   color: white;
 }
 
-.img-logo {
-  width: 200px;
-}
+.img-logo { width: 200px; }
 
-/* Footer */
 .page-footer {
   background-color: var(--primary-color);
   color: white;
@@ -111,22 +87,15 @@ button:hover, button:focus {
   transition: transform 0.3s ease;
 }
 
-.page-footer img:hover {
-  transform: scale(1.2);
-}
+.page-footer img:hover { transform: scale(1.2); }
 
-/* Main Content */
-.maininfo, .about-me {
-  padding: 20px;
-  text-align: center;
-}
+.maininfo, .about-me { padding: 20px; text-align: center; }
 
-/* Adjusting the grid for 6 items per row */
 .grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr); /* 6 items per row */
-  gap: 20px; /* Space between items */
+  gap: 20px;
   padding: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 
 .grid__item {
@@ -143,135 +112,60 @@ button:hover, button:focus {
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
-.grid__item h2 {
-  margin-bottom: 10px;
-  color: black;
-}
+.grid__item h2 { margin-bottom: 10px; color: black; }
+.grid__item p { margin-bottom: 15px; }
+.grid__item a { color: var(--accent-color); font-weight: bold; }
 
-.grid__item p {
-  margin-bottom: 15px;
-}
-
-.grid__item a {
-  color: var(--accent-color);
-  font-weight: bold;
-}
-
-/* Media Queries */
 @media (max-width: 768px) {
-  .header-bar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .nav-list {
-    flex-direction: column;
-    gap: 10px;
-  }
+  .header-bar { flex-direction: column; align-items: flex-start; }
+  .nav-list { flex-direction: column; gap: 10px; }
+  .grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 500px) {
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  button {
-    padding: 8px 15px;
-  }
+  h1 { font-size: 1.8rem; }
+  button { padding: 8px 15px; }
+  .grid { grid-template-columns: 1fr; }
 }
-
-/* Responsive adjustment for smaller screens */
-@media (max-width: 1200px) {
-  .grid {
-    grid-template-columns: repeat(4, 1fr); /* 4 items per row for medium screens */
-  }
-}
-
-@media (max-width: 768px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 items per row for small screens */
-  }
-}
-
-@media (max-width: 500px) {
-  .grid {
-    grid-template-columns: 1fr; /* 1 item per row for extra small screens */
-  }
-}
-
 
 .skills-table {
-  margin: 20px auto; /* Center the table */
-  border-collapse: collapse; /* Avoid double borders */
-  width: 80%; /* Adjust width as needed */
-  text-align: center; /* Center-align text within the table */
+  margin: 20px auto;
+  border-collapse: collapse;
+  width: 80%;
+  text-align: center;
 }
 
-.skills-table th,
-.skills-table td {
-  border: 1px solid var(--secondary-color); /* Add border */
-  padding: 10px 15px; /* Add padding */
+.skills-table th, .skills-table td {
+  border: 1px solid var(--secondary-color);
+  padding: 10px 15px;
 }
 
 .skills-table th {
-  background-color: var(--primary-color); /* Header background */
-  color: white; /* Header text color */
+  background-color: var(--primary-color);
+  color: white;
   font-weight: bold;
 }
 
-.skills-table tr:nth-child(even) {
-  background-color: #f9f9f9; /* Zebra stripe */
-}
-
-.skills-table tr:hover {
-  background-color: var(--accent-color); /* Highlight row on hover */
-  color: white;
-}
+.skills-table tr:nth-child(even) { background-color: #f9f9f9; }
+.skills-table tr:hover { background-color: var(--accent-color); color: white; }
 
 .main-contact {
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  flex-direction: column; /* Stack items vertically */
-  height: 100vh; /* Full viewport height */
-  text-align: center; /* Center text */
-  font-family: Arial, sans-serif;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  text-align: center;
 }
 
-.contact-container {
-  max-width: 500px;
-  width: 100%;
-}
-
-.contact-form-input form {
-  margin-bottom: 30px; /* Add space below the form */
-}
-
-.contact-form h1 {
-  margin-bottom: 15px; /* Add spacing above My Contacts */
-}
-
+.contact-container { max-width: 500px; width: 100%; }
+.contact-form-input form { margin-bottom: 30px; }
+.contact-form h1 { margin-bottom: 15px; }
 .contact-form a {
-  display: block; /* Make links block elements for vertical spacing */
-  margin: 5px 0; /* Add spacing between links */
+  display: block;
+  margin: 5px 0;
 }
 
-button {
-  background-color: var(--primary-color); /* Adjust to your theme color */
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  font-size: 1rem;
-  border-radius: 5px;
-}
-
-button:hover {
-  background-color: var(--accent-color); /* Adjust hover color */
-}
-
-
-/* Case Study Section */
 .case-study {
   background-color: white;
   border-radius: 10px;
@@ -287,16 +181,6 @@ button:hover {
   color: var(--primary-color);
   text-align: center;
   margin-bottom: 20px;
-}
-
-.case-study__overview,
-.case-study__purpose,
-.case-study__tools,
-.case-study__development,
-.case-study__challenges,
-.case-study__duration,
-.case-study__credits {
-  margin-bottom: 30px;
 }
 
 .case-study h2 {
@@ -316,14 +200,10 @@ button:hover {
 
 .case-study ul {
   list-style: disc inside;
-  margin-left: 20px;
-  margin-bottom: 15px;
+  margin: 0 20px 15px;
 }
 
-.case-study ul li {
-  margin-bottom: 10px;
-}
-
+.case-study ul li { margin-bottom: 10px; }
 .case-study__image {
   width: 100%;
   max-width: 800px;
@@ -333,48 +213,7 @@ button:hover {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Highlighting Key Information */
-.case-study strong {
-  color: var(--primary-color);
-}
-
-/* Responsive Design for Case Study */
-@media (max-width: 768px) {
-  .case-study {
-    padding: 20px;
-  }
-
-  .case-study__title {
-    font-size: 1.8rem;
-  }
-
-  .case-study h2 {
-    font-size: 1.5rem;
-  }
-
-  .case-study p {
-    font-size: 0.9rem;
-  }
-}
-
-/* Buttons for Case Study */
-.case-study button {
-  background-color: var(--primary-color);
-  color: white;
-  font-family: var(--font-secondary);
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.case-study button:hover {
-  background-color: var(--accent-color);
-  transform: scale(1.05);
-}
-
-/* Credits Section Styling */
+.case-study strong { color: var(--primary-color); }
 .case-study__credits ul {
   list-style: none;
   padding: 0;
@@ -387,14 +226,12 @@ button:hover {
   color: var(--secondary-color);
 }
 
-/* Horizontal Line for Separation */
 .case-study hr {
   border: none;
   border-top: 1px solid var(--secondary-color);
   margin: 20px 0;
 }
 
-/* Specific Styling for Development Section */
 .case-study__development {
   display: flex;
   flex-wrap: wrap;
@@ -406,33 +243,67 @@ button:hover {
   flex: 1 1 calc(50% - 20px);
 }
 
-.case-study__server-side h3,
-.case-study__client-side h3 {
-  font-size: 1.5rem;
-  color: var(--secondary-color);
-  margin-bottom: 10px;
-}
-
-.case-study__server-side p,
-.case-study__client-side p {
-  font-size: 1rem;
-  color: var(--text-color);
-  line-height: 1.5;
-}
-
 @media (max-width: 768px) {
-  .case-study__development {
-    flex-direction: column;
-  }
-
-  .case-study__server-side,
-  .case-study__client-side {
-    flex: 1 1 100%;
-  }
+  .case-study__development { flex-direction: column; }
+  .case-study__server-side, .case-study__client-side { flex: 1 1 100%; }
 }
 
-h1 {
-  color: black;
+.personal_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.personal_container img {
+  border-radius: 50%;
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border: 3px solid #ccc;
+}
+
+.main-navigation ul li a {
+  display: inline-block;
+  color: white;
+  background-color: var(--secondary-color);
+  text-decoration: none;
+  padding: 5px 15px;
+  border-radius: 8px;
+  font-family: 'Sixtyfour', sans-serif;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.main-navigation ul li a:hover,
+.main-navigation ul li a:focus {
+  background-color: var(--secondary-color);
+  transform: scale(1.05);
+  color: white;
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.button-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #e74c3c;
+  color: #000;
+  font-size: 16px;
+  font-family: 'Sixtyfour', sans-serif;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button-link:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
 #intro {
@@ -452,75 +323,4 @@ h1 {
   line-height: 1.8;
   max-width: 800px;
   margin: 0 auto;
-}
-
-.personal_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px; /* Adjust as needed for spacing */
-}
-
-.personal_container img {
-  border-radius: 50%; /* Makes the image circular, if square */
-  max-width: 300px; /* Adjust for your preferred size */
-  width: 100%;
-  height: auto;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
-  border: 3px solid #ccc; /* Optional border for a clean look */
-}
-
-/* Navbar links styled as buttons */
-.main-navigation ul li a {
-  display: inline-block; /* Allow padding for button look */
-  color: white; /* White text color for better contrast */
-  background-color: var(--secondary-color); /* Example button color */
-  text-decoration: none; /* Remove the underline */
-  padding: 5px 15px; /* Add space around text */
-  border-radius: 8px; /* Rounded corners for buttons */
-  font-family: 'Sixtyfour', sans-serif; /* Use your imported font */
-  font-weight: bold; /* Bold text for emphasis */
-  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth animations */
-}
-
-/* Hover and focus effects */
-.main-navigation ul li a:hover,
-.main-navigation ul li a:focus {
-  background-color: var(--secondary-color); /* Darker color on hover */
-  transform: scale(1.05); /* Slightly enlarge the button */
-  color: white; /* Ensure text remains white */
-}
-
-/* Button Container */
-.button-container {
-  text-align: center;
-  margin-top: 20px; /* Adds some spacing from the text above */
-}
-
-.button-link {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #e74c3c; /* Red background color */
-  color: #000; /* Black text color */
-  font-size: 16px; /* Adjust font size as needed */
-  font-family: 'Sixtyfour', sans-serif; /* Matches your font */
-  text-decoration: none; /* Remove underline */
-  border-radius: 8px; /* Rounded corners */
-  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover and scaling effect */
-}
-
-.button-link:hover {
-  background-color: #c0392b; /* Darker red for hover effect */
-  transform: scale(1.05); /* Slight enlargement on hover */
-  cursor: pointer;
-}
-
-/* Example Integration: Adjust for your current usage */
-.case-study .button-container {
-  margin-top: 30px; /* Optional: specific margin for case-study section */
-}
-
-.case-study .button-link {
-  font-size: 18px; /* Slightly larger font size for prominence */
-  padding: 12px 25px; /* Adjust padding for larger buttons */
 }

@@ -490,3 +490,37 @@ h1 {
   transform: scale(1.05); /* Slightly enlarge the button */
   color: white; /* Ensure text remains white */
 }
+
+/* Button Container */
+.button-container {
+  text-align: center;
+  margin-top: 20px; /* Adds some spacing from the text above */
+}
+
+.button-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #e74c3c; /* Red background color */
+  color: #000; /* Black text color */
+  font-size: 16px; /* Adjust font size as needed */
+  font-family: 'Sixtyfour', sans-serif; /* Matches your font */
+  text-decoration: none; /* Remove underline */
+  border-radius: 8px; /* Rounded corners */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover and scaling effect */
+}
+
+.button-link:hover {
+  background-color: #c0392b; /* Darker red for hover effect */
+  transform: scale(1.05); /* Slight enlargement on hover */
+  cursor: pointer;
+}
+
+/* Example Integration: Adjust for your current usage */
+.case-study .button-container {
+  margin-top: 30px; /* Optional: specific margin for case-study section */
+}
+
+.case-study .button-link {
+  font-size: 18px; /* Slightly larger font size for prominence */
+  padding: 12px 25px; /* Adjust padding for larger buttons */
+}

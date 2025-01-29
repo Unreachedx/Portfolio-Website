@@ -6,9 +6,9 @@
 }
 
 :root {
-  --primary-color: #0b4f94;
+  --primary-color: #bdbfc1;
   --secondary-color: #34495e;
-  --accent-color: #e74c3c;
+  --accent-color: #64605f;
   --background-color: #ecf0f1;
   --text-color: #262c2e;
   --link-hover-color: #e67e22;
@@ -291,7 +291,7 @@ button:hover, button:focus { background-color: var(--link-hover-color); transfor
 .button-link {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #e74c3c;
+  background-color: #887978;
   color: #000;
   font-size: 16px;
   font-family: 'Sixtyfour', sans-serif;

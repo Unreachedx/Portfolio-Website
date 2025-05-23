@@ -7,21 +7,20 @@
         <link rel="shortcut icon" href="./img/starcraft-2-zergling.png">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/style.production.css">
     </head>
     <body>
       <header class="header-bar">
-          <img src="img/webdeveloper.svg" alt="Logo" class="page-header__item img-logo">
+        <div id="personal_pic" class="personal_container">
+          <img src="img/Me.jpg" alt="Picture of me">
+        </div>
         <h1>Patrick Oliphant</h1>
         <nav class="main-navigation pageheader__item" >
           <div>
             <ul role="menubar">
               <li role="presentation">
                 <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
-              </li>
-              <li role="presentation">
-                <a href="work.html" role="menuitem" class="navigation-list__item">Work</a>
               </li>
               <li role="presentation">
                 <a href="about.html" role="menuitem" class="navigation-list__item">More About Me</a>
@@ -47,13 +46,80 @@
               From designing sleek user interfaces to building scalable back-end systems, I thrive on crafting solutions that not only work but inspire. My journey in tech is fueled by curiosity, creativity, and a relentless drive to make an impact.
             </p>
             <p>
-              Explore my projects, dive into my process, and discover how I bring ideas to life. Let’s create something extraordinary together!
+              Explore my projects, dive into my process, and discover how I bring ideas to life. Let's create something extraordinary together!
             </p>
+            <div class="button-container">
+            </div>
           </section>
-      </p>
-      <div id="personal_pic" class="personal_container">
-        <img src="img/Me.jpeg" alt="Picture of me">
-      </div>
+          <section>
+              <h1>My Recent Projects</h1>
+              <div class="grid">
+                 <!-- Grid items will live here -->
+                 <div class="grid__item">
+                   <h2>Cinerail Project</h2>
+                   <p>
+                    Movie Page Front-end <br>
+                    Built in React.js, with Fetching API Data. <br>
+                    With the Options to Search for Movies, Darkmode
+                   </p>
+                   <p>Below the Live Version</p>
+                   <a href="https://cinetrail-paddy.netlify.app/">Cinerail Movie Site - Live</a><br><br>
+                   <a href="https://github.com/Unreachedx/CineTrail2">Cinerail - Github</a>
+                </div>
+               <div class="grid__item">
+                <h2>Rick and Morty Page</h2>
+                <p>
+                  Rick and Morty Fan Page Front-end<br>
+                  Build in React.js <br>
+                  With the Options to Filter, Search, add to Favorits
+                </p>
+                <p>Below the Live Version</p>
+                <a href="https://rickandmorty-paddy.netlify.app/">Rick and Morty - Live</a><br><br>
+                <a href="https://github.com/Unreachedx/Rick-and-Mortyx">Rick und Morty - Github</a>
+             </div>
+             <div class="grid__item">
+              <h2>General Movie Site</h2>
+              <p>
+                Movie Page, FullStack Application<br>
+                Build with React.js (Front-end) and Node.js & Express.js Backend<br>
+                including MongoDB, jsonwebtoken, bcrypt, body-parser etc.<br>
+                With the Options to Create Account, Login, Search, Add To Favorits, Change User Data
+              </p>
+              <p>Below the Live Version or the Case Study</p>
+                 <a href="https://myflix-paddy.netlify.app/">Movie App - Live</a><br>
+                 <a href="CaseStudy.html">Case Study</a><br><br>
+      
+                 <a href="https://github.com/Unreachedx/movie_api"> Movie App - Backend - Github</a><br>
+                 <a href="https://github.com/Unreachedx/myFlix-client">Movie App - Frontend - Github</a>
+            </div>
+            <div class="grid__item">
+              <h2>Meet App</h2>
+              <p>
+                Meet App<br>
+                 PWA Serverless Application<br>
+                Build in React.js<br>
+                The application uses the Google Calendar API to fetch upcoming events.<br>
+                Build in the TDD approach
+                With the Options for Search for Citys, Check Details, Limit by Number of Events
+              </p>
+              <p>Below the Live Version</p>
+              <a href="https://unreachedx.github.io/meet/">Meet App - Live</a><br><br>
+              <a href="https://github.com/Unreachedx/meet">Meet App - Github</a>
+            </div>
+            <div class="grid__item">
+              <h2>React Native Mobile Chat App</h2>
+              <p>
+                React Native Mobile Chat App<br>
+                Build in React Nativ, with Expo for testing.<br>
+                The app will
+                provide users with a chat interface and options to share images and their
+                location.<br>
+                <p>Here is no Live version available</p>
+              </p>
+              <a href="https://github.com/Unreachedx/Chat-App">Chat App - Github Link</a>
+            </div>
+          </div>
+           </section>
       </main>
       <footer class="page-footer">
       <div>
@@ -63,7 +129,7 @@
                 <img src="img/317712_code_repository_github_repository_resource_icon.svg" alt="GitHub">
             </a>
             <!-- LinkedIn link -->
-            <a href="https://www.linkedin.com/in/patrick-oliphant-27a0a1247/" target="_blank">
+            <a href="www.linkedin.com/in/patrickoliphant90" target="_blank">
                 <img src="img/104493_linkedin_icon.svg" alt="LinkedIn">
             </a>
         </div>
